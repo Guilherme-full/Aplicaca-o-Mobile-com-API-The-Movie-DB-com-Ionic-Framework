@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      CB Dinâmico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- parenteses vai do html pro type, e colchete vai do type pro html-->
+  <ion-searchbar placeholder="Buscar Desenhos"></ion-searchbar>
+  <ion-list (ionChange)="listar($event)">
+    <ion-item lines="full" *ngFor="let item of lista">
+      <ion-label>{{ item.nome }}</ion-label>
+      <ion-checkbox slot="end" color="{{ item.color }}" value="{{ item.nome }}" [(ngModel)]="item.isChecked">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" fill="butline" shape="round" (click)="capturarSituacao()">Capturar Situação</ion-button>
+
+</ion-content>

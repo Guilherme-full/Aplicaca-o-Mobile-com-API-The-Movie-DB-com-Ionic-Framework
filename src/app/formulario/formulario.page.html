@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]='true'>
+  <ion-item color="dark" lines="none">
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item color="dark" lines="none">
+    <ion-label position="floating">Sobrenome</ion-label>
+    <ion-input type="text" [(ngModel)]="sobrenome"></ion-input>
+  </ion-item>
+  <ion-item color="dark" lines="none">
+    <ion-label position="floating">Estado</ion-label>
+    <ion-input type="text" [(ngModel)]="estado"></ion-input>
+  </ion-item>
+  <ion-item color="dark" lines="none">
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input type="text" [(ngModel)]="cidade"></ion-input>
+  </ion-item>
+  <ion-item color="dark" lines="none">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="mail" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item color="dark" lines="none">
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+  <ion-button expand="full" fill="outline" color="light">Cadastrar</ion-button>
+  <ion-button (click)="limpar()" expand="full" fill="clear" color="light">Limpar</ion-button>
+
+</ion-content>
